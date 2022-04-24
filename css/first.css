@@ -635,6 +635,7 @@ button {
   .cover-wrapper.dock .menu .list-h {
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
+    z-index: 1;
   }
 }
 @supports (backdrop-filter: blur(20px)) {
