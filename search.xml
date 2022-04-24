@@ -20,9 +20,9 @@
       
         <tags>
             
-            <tag> 软件安装 </tag>
-            
             <tag> 视频 </tag>
+            
+            <tag> 软件安装 </tag>
             
             <tag> 剪辑教程 </tag>
             
@@ -49,9 +49,9 @@
       
         <tags>
             
-            <tag> 高考 </tag>
-            
             <tag> 视频 </tag>
+            
+            <tag> 高考 </tag>
             
             <tag> 成片 </tag>
             
@@ -89,25 +89,27 @@
     
     
     <entry>
-      <title>Example Pr安装教程 Test 1</title>
-      <link href="/tech/example1/"/>
-      <url>/tech/example1/</url>
+      <title>抗疫日记 疫情专题片</title>
+      <link href="/media/anti_virus_diary/"/>
+      <url>/media/anti_virus_diary/</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><div class="story post-story"><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p></div>]]></content>
+        <content type="html"><![CDATA[<iframe src="//player.bilibili.com/player.html?aid=94480910&bvid=BV1jE411g7SN&cid=161293482&page=1&danmaku=1" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe><h3 id="抗击疫情，我们在行动。为武汉加油，为中国加油，为世界加油。"><a href="#抗击疫情，我们在行动。为武汉加油，为中国加油，为世界加油。" class="headerlink" title="抗击疫情，我们在行动。为武汉加油，为中国加油，为世界加油。"></a>抗击疫情，我们在行动。为武汉加油，为中国加油，为世界加油。</h3><p>原视频存储于Bilibili.<br><a href="https://www.bilibili.com/video/BV1jE411g7SN"><img src="https://cdn.jsdelivr.net/gh/Extremeer/CDN/BlogImages/get_to_bilibili.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Extremeer/CDN/BlogImages/get_to_bilibili.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="跳转Blibili" style="zoom:25%;" /></a></p><p>部分素材来自：<br>人民日报 中国日报<br>央视新闻 丁香园<br>世界卫生组织 武汉市卫健委<br>音乐来自：the Millenium Dawn, a mod of Hearts of Iron IV.<br>Mod及音乐情感背景与本视频和工作室引用无关</p><p>2020-03-08</p>]]></content>
       
       
       <categories>
           
-          <category> 科技·安装教程 </category>
+          <category> 传媒·社会 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 软件安装 </tag>
+            <tag> 疫情 </tag>
             
-            <tag> 影视工具 </tag>
+            <tag> 社会 </tag>
+            
+            <tag> 视频 </tag>
             
         </tags>
       
