@@ -634,6 +634,7 @@ button {
 @media screen and (max-width: 500px) {
   .cover-wrapper.dock .menu .list-h {
     overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
   }
 }
 @supports (backdrop-filter: blur(20px)) {
