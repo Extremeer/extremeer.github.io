@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://extremeer.github.io/friends/"/>
+  <link rel="canonical" href="https://extremeer.github.io/tech/twos_complement/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://npm.elemecdn.com'>
@@ -32,21 +32,22 @@
   <!-- feed -->
   <!-- 页面元数据 -->
   <pjax>
-  <title>合作伙伴 - Extremeer 极振科技传媒工作室</title>
-  <meta name="keywords" content="null">
-  <meta desc name="description" content="合作伙伴
-极振科技传媒工作室拥有许多朋友，他们有的是工作室的成员，有的是亲密的合作伙伴，在和他们的合作过程中工作室获得了许多的经验，也正因有了他们的帮助，工作室才能发展至今。 - John Doe - Extremeer 极振科技传媒工作室">
+  <title>补码 计算机系统数值表示 - Extremeer 极振科技传媒工作室</title>
+  <meta name="keywords" content="教程,原理,null">
+  <meta desc name="description" content="Extremeer 极振科技传媒工作室 - John Doe - Extremeer 极振科技传媒工作室">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="Extremeer 极振科技传媒工作室">
-<meta property="og:url" content="https://extremeer.github.io/friends/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="补码 计算机系统数值表示">
+<meta property="og:url" content="https://extremeer.github.io/tech/twos_complement/index.html">
 <meta property="og:site_name" content="Extremeer 极振科技传媒工作室">
-<meta property="og:description" content="合作伙伴 极振科技传媒工作室拥有许多朋友，他们有的是工作室的成员，有的是亲密的合作伙伴，在和他们的合作过程中工作室获得了许多的经验，也正因有了他们的帮助，工作室才能发展至今。">
+<meta property="og:description" content="1. 真值与机器数真值是原来的数，机器数为相应存储在电脑内的二进制数。 2. 模的概念一个计量系统的计数范围。  生活实例：时钟的模为12，计量范围是0~11，11过后又回到 0。n位计算机数的模为2n，计量范围是0~(2n-1)。   运用：n&#x3D;4，模为24&#x3D;16，计量范围是0~15（二进制表示0000~1111）。如当前数15的二进制值为1111，则再加1，计数值就变为了0">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-04-23T14:28:47.867Z">
-<meta property="article:modified_time" content="2022-04-23T14:28:47.867Z">
+<meta property="article:published_time" content="2021-02-28T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-04-25T11:18:17.116Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="原理">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   </pjax>
@@ -2247,6 +2248,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
         <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self"  href="/" onclick="return false;" title="comment"></a></li>
         
+          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self"  href="/" onclick="return false;" title="toc"></a></li>
+        
       </ul>
     </div>
 		<div class="nav-main">
@@ -2596,7 +2599,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper friends dock' style="display: none;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -2696,10 +2699,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
-<div id="l_main" class=' no_sidebar'>
-  <article id="friends" class="md post article article-entry l_friends white-box reveal shadow blur article-type-friends" itemscope itemprop="blogPost">
-    
+<div id="l_main" class=''>
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="https://extremeer.github.io/tech/twos_complement/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Extremeer 极振科技传媒工作室">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Extremeer 极振科技传媒工作室">
+    <meta itemprop="description" content="">
+  </span>
+  
 
 
   
@@ -2711,78 +2721,210 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
     
-      <span hidden itemprop="name headline">
+      <h1 class="title" itemprop="name headline">
+        补码 计算机系统数值表示
+      </h1>
+      <div class='new-meta-box'>
         
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://cdn.jsdelivr.net/gh/Extremeer/CDN/BlogImages/a462cee71b2ec2a53eecd7bc341d3c54ac3efeca.jpg@150w_150h.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Extremeer/CDN/BlogImages/a462cee71b2ec2a53eecd7bc341d3c54ac3efeca.jpg@150w_150h.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">极振科技传媒工作室 首席执行官 Marz</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E7%A7%91%E6%8A%80%C2%B7%E7%BC%96%E7%A8%8B/">科技·编程</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E7%A7%91%E6%8A%80%C2%B7%E7%BC%96%E7%A8%8B/" itemprop="url"><span itemprop="name">科技·编程</span></a>
       </span>
     
   </div>
 
 
-    <center><font size=7>合作伙伴</font></center>
-<br>极振科技传媒工作室拥有许多朋友，他们有的是工作室的成员，有的是亲密的合作伙伴，在和他们的合作过程中工作室获得了许多的经验，也正因有了他们的帮助，工作室才能发展至今。
-    
-      
-        <div class='friends-group'>
-          <br>
-          <!--h2 class='friend-header'-->
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2021-03-01T00:00:00+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年3月1日</p>
+  </a>
+</div>
+
+          
+        
+          
             
-          </h2>
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="补码 计算机系统数值表示" data-path="/tech/twos_complement/">
+        <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
           
-          
-            <div class='friend-content'>
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <div class="story post-story"><h2 id="1-真值与机器数"><a href="#1-真值与机器数" class="headerlink" title="1. 真值与机器数"></a>1. 真值与机器数</h2><p>真值是原来的数，机器数为相应存储在电脑内的二进制数。</p>
+</div><div class="story post-story"><h2 id="2-模的概念"><a href="#2-模的概念" class="headerlink" title="2. 模的概念"></a>2. 模的概念</h2><p>一个计量系统的计数范围。</p>
+<blockquote>
+<p>生活实例：时钟的模为12，计量范围是0~11，11过后又回到 0。<br>n位计算机数的模为2<sup>n</sup>，计量范围是0~(2<sup>n</sup>-1)。</p>
+</blockquote>
+<blockquote>
+<p>运用：n&#x3D;4，模为2<sup>4</sup>&#x3D;16，计量范围是0~15（二进制表示0000~1111）。如当前数15的二进制值为1111，则再加1，计数值就变为了0000，真值就变成了0，而在最高位上溢出了一个1。</p>
+</blockquote>
+</div><div class="story post-story"><h2 id="3-补码（以8位二进制为例）"><a href="#3-补码（以8位二进制为例）" class="headerlink" title="3. 补码（以8位二进制为例）"></a>3. 补码（以8位二进制为例）</h2><p>本质：用大的正数来表示小的负数，化减为加。</p>
+<blockquote>
+<p>生活实例：在时钟内：从8点调到5点，有8-3&#x3D;8+9，则-3&#x3D;9（绝对值相加等于模）</p>
+</blockquote>
+<h3 id="1-原理"><a href="#1-原理" class="headerlink" title="(1) 原理"></a>(1) 原理</h3><p>8位二进制数原本计数的范围是0~255，因需要表示负数使用补码，将128~255用来表示负数（-1~-128）其二进制首位为1，0~127不变仍表示正数（0~127）其二进制首位为0。</p>
+<p><strong>若最终结果超出范围，可增加位数避免溢出。</strong></p>
+<blockquote>
+<p>例：若想记录数128，则需要将8位二进制数提升至16位，扩大计数范围避免溢出。</p>
+</blockquote>
+<h3 id="2-补码的二进制表示"><a href="#2-补码的二进制表示" class="headerlink" title="(2) 补码的二进制表示"></a>(2) 补码的二进制表示</h3><p>如果n是正数，补码就是其二进制，如果n是负数，补码则是n+256的二进制。</p>
+<blockquote>
+<p>「+73」补码 &#x3D; 01001001<br>「-73」补码 &#x3D; 10000000 - 01001001&#x3D;10110111（183的二进制）</p>
+</blockquote>
+<h3 id="3-补码的运算"><a href="#3-补码的运算" class="headerlink" title="(3) 补码的运算"></a>(3) 补码的运算</h3><p>① 真值到补码：</p>
+<ul>
+<li>当n是负数，可以通过其相反数各位<code>取反加1</code>来快速求出补码。</li>
+</ul>
+<blockquote>
+<p>例：设n&#x3D;8，求-36补码。<br>36的二进制&#x3D;00100100<br>各位取反得11011011<br>末位加1结果为11011100即为补码</p>
+</blockquote>
+<p>② 补码到真值：</p>
+<ul>
+<li>如果补码最高位是1（即真值128以上，代表负数），将各位取反加一，转换为十进制再加负号。</li>
+<li>如果补码最高位是0（即真值127以下，代表正数），直接转换为十进制即可。</li>
+</ul>
+<blockquote>
+<p>例：假设n的八位补码是10101010，求n真值。<br>10101010取反加一&#x3D;01010110<br>01010110的十进制&#x3D;86<br>添加负号n&#x3D;-86</p>
+</blockquote>
+
+</div>
+  </div>
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
               
-                
-                  <a class='friend-card'
-                    target="_blank" rel="external noopener noreferrer" href="http://roranrui.cn/">
-                    <div class='friend-left'>
-                      
-                        <img class='avatar' src='https://roranrui.cn/medias/roranrui.jpg'/>
-                      
-                    </div>
-                    <div class='friend-right'>
-                      <p class="friend-name">若然无亦</p>
-                      
-                      
-                        <div class='friend-tags-wrapper'>
-                          <p class="tags">ヤミを照らす　進め</p>
-                        </div>
-                      
-                    </div>
-                  </a>
-                
+                <p>转载请注明出处，Copyright © 2015-2022 Extremeer 极振科技传媒工作室 保留所有权利。</p>
+
               
-                
-                  <a class='friend-card'
-                    target="_blank" rel="external noopener noreferrer" href="https://space.bilibili.com/355070405/">
-                    <div class='friend-left'>
-                      
-                        <img class='avatar' src='https://cdn.jsdelivr.net/gh/Extremeer/CDN/BlogImages/assuching.png'/>
-                      
-                    </div>
-                    <div class='friend-right'>
-                      <p class="friend-name">Assu'Ching</p>
-                      
-                      
-                        <div class='friend-tags-wrapper'>
-                          <p class="tags">极振首席技术官</p>
-                        </div>
-                      
-                    </div>
-                  </a>
-                
-              
-            </div>
-          
+            
+          </blockquote>
         </div>
       
-    
-    <br><br>
-    <center><font size=6>感谢你们的参与！</center>
+      
+    </div>
+  
+  
     
 
 
   <div class='article-meta' id="bottom">
     <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-25T19:18:17+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2022年4月25日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%95%99%E7%A8%8B/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>教程</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%8E%9F%E7%90%86/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>原理</p></a></div>
+  <span hidden itemprop="keywords">教程 原理</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://extremeer.github.io/tech/twos_complement/&title=补码 计算机系统数值表示 - Extremeer 极振科技传媒工作室&summary="
+          
+          >
+          
+            <img src="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://extremeer.github.io/tech/twos_complement/&title=补码 计算机系统数值表示 - Extremeer 极振科技传媒工作室&summary="
+          
+          >
+          
+            <img src="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://extremeer.github.io/tech/twos_complement/&title=补码 计算机系统数值表示 - Extremeer 极振科技传媒工作室&summary="
+          
+          >
+          
+            <img src="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
       
     </div>
     <!-- Custom Files bottomMeta begin -->
@@ -2791,31 +2933,198 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   </div>
 
 
-  </article>
+  
+  
 
-  <!--%- partial('_plugins/comments/index',{post: page}) %-->
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/tech/cpp_easy_section_1/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>C++极简教程 第一章 C++基本概念</p>
+          <p class='content'>本系列为C++的入门学习者服务，旨在于为此前毫无C++基础且未来要学习C++的学习者简单介绍关于C++语言最基础的部分知识，如果已入门C++，则不需要阅读本系列。
+1.1 C++语言概述与框架1...</p>
+        </a>
+      
+      
+        <a class='next' href='/media/anti_virus_diary/'>
+          <p class='title'>「抗疫日记」疫情专题片<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+
+抗击疫情，我们在行动。为武汉加油，为中国加油，为世界加油。原视频存储于Bilibili.
+部分素材来自：人民日报 中国日报央视新闻 丁香园世界卫生组织 武汉市卫健委音乐来自：the Mill...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+  
+  <article class="post white-box reveal shadow blur" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/tech/twos_complement/index.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    
+    
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+  
+
+
+
+
 
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow blur desktop mobile pjax" id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%9C%9F%E5%80%BC%E4%B8%8E%E6%9C%BA%E5%99%A8%E6%95%B0"><span class="toc-text">1. 真值与机器数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%A8%A1%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-text">2. 模的概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%A1%A5%E7%A0%81%EF%BC%88%E4%BB%A58%E4%BD%8D%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%BA%E4%BE%8B%EF%BC%89"><span class="toc-text">3. 补码（以8位二进制为例）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%8E%9F%E7%90%86"><span class="toc-text">(1) 原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%A1%A5%E7%A0%81%E7%9A%84%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA"><span class="toc-text">(2) 补码的二进制表示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%A1%A5%E7%A0%81%E7%9A%84%E8%BF%90%E7%AE%97"><span class="toc-text">(3) 补码的运算</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+  
+
+  
+    
+    
+
+<section class="widget blogger shadow blur desktop mobile pjax">
+  <div class='content'>
+    
+      
+        <a class='avatar flat-box rectangle' href='/about/'>
+          <img no-lazy src='https://cdn.jsdelivr.net/gh/Extremeer/CDN/BlogImages/Logo-ExtremeerShadowLong@3x.png'/>
+        </a>
+      
+    
+    
+      <div class='text'>
+        
+          <h2>极振科技传媒工作室</h2>
+        
+        
+          <p>Extremeer</p>
+
+        
+        
+          <p><span id="jinrishici-sentence">Extremeer 极振科技传媒工作室</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="https://space.bilibili.com/44514589"
+              class="social fa-brands fa-bilibili flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="https://github.com/Extremeer"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+  
+
+  <section class="widget category shadow blur desktop pjax">
+    
+  <header>
+    
+      <a href='/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>合集</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/%E4%BC%A0%E5%AA%92%C2%B7%E6%95%99%E8%82%B2/" href="/categories/%E4%BC%A0%E5%AA%92%C2%B7%E6%95%99%E8%82%B2/"
+            active-action="action-categoriesE4BCA0E5AA92C2B7E69599E882B2"
+            ><div class='name'>传媒·教育</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E4%BC%A0%E5%AA%92%C2%B7%E7%A4%BE%E4%BC%9A/" href="/categories/%E4%BC%A0%E5%AA%92%C2%B7%E7%A4%BE%E4%BC%9A/"
+            active-action="action-categoriesE4BCA0E5AA92C2B7E7A4BEE4BC9A"
+            ><div class='name'>传媒·社会</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E7%A7%91%E6%8A%80%C2%B7%E7%BC%96%E7%A8%8B/" href="/categories/%E7%A7%91%E6%8A%80%C2%B7%E7%BC%96%E7%A8%8B/"
+            active-action="action-categoriesE7A791E68A80C2B7E7BC96E7A88B"
+            ><div class='name'>科技·编程</div><div class='badge'>(2)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+  
+
+  
+    
+    
+  
+
+  <section class="widget tagcloud shadow blur desktop mobile pjax">
+    
+  <header>
+    
+      <a href='/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>标签</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <a href="/tags/C/" style="font-size: 14px; color: #999">C++</a> <a href="/tags/%E5%88%9D%E4%B8%AD/" style="font-size: 14px; color: #999">初中</a> <a href="/tags/%E5%8E%9F%E7%90%86/" style="font-size: 14px; color: #999">原理</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 19px; color: #777">教程</a> <a href="/tags/%E6%AF%95%E4%B8%9A/" style="font-size: 14px; color: #999">毕业</a> <a href="/tags/%E7%89%B9%E6%95%88/" style="font-size: 14px; color: #999">特效</a> <a href="/tags/%E7%96%AB%E6%83%85/" style="font-size: 14px; color: #999">疫情</a> <a href="/tags/%E7%A4%BE%E4%BC%9A/" style="font-size: 19px; color: #777">社会</a> <a href="/tags/%E7%A7%91%E6%8A%80/" style="font-size: 14px; color: #999">科技</a> <a href="/tags/%E8%A7%86%E9%A2%91/" style="font-size: 24px; color: #555">视频</a> <a href="/tags/%E9%AB%98%E4%B8%AD/" style="font-size: 19px; color: #777">高中</a> <a href="/tags/%E9%AB%98%E8%80%83/" style="font-size: 14px; color: #999">高考</a>
+    </div>
+  </section>
+
+
+  
+
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -2840,13 +3149,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -4162,7 +4472,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Extremeer 极振科技传媒工作室","url":"https://extremeer.github.io/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://extremeer.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://extremeer.github.io/","name":"Extremeer 极振科技传媒工作室"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Extremeer 极振科技传媒工作室","url":"https://extremeer.github.io/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://extremeer.github.io/","description":""},"publisher":{"@type":"Organization","name":"Extremeer 极振科技传媒工作室","url":"https://extremeer.github.io/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://extremeer.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Extremeer 极振科技传媒工作室","url":"https://extremeer.github.io/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://extremeer.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://extremeer.github.io/","name":"Extremeer 极振科技传媒工作室"}},{"@type":"ListItem","position":2,"item":{"@id":"https://extremeer.github.io/categories/科技·编程/","name":"科技·编程"}},{"@type":"ListItem","position":3,"item":{"@id":"https://extremeer.github.io/tech/twos_complement/","name":"补码 计算机系统数值表示"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"补码 计算机系统数值表示","description":"","datePublished":"2021-02-28T16:00:00.000Z","dateModified":"2022-04-25T11:18:17.116Z","inLanguage":["zh-CN","en","zh-HK","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://extremeer.github.io/tech/twos_complement/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://extremeer.github.io/"},"publisher":{"@type":"Organization","name":"Extremeer 极振科技传媒工作室","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://extremeer.github.io/tech/twos_complement/","wordCount":0,"articleSection":"科技·编程","keywords":"教程,原理","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

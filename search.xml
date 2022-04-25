@@ -4,33 +4,6 @@
   
     
     <entry>
-      <title>C++极简教程 第一章 语言概述与框架</title>
-      <link href="/tech/cpp_section_1/"/>
-      <url>/tech/cpp_section_1/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><div class="story post-story"><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p></div>]]></content>
-      
-      
-      <categories>
-          
-          <category> 科技·编程 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> C++ </tag>
-            
-            <tag> 教程 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>「See the Color 看见未来的颜色」玉溪师院附中 2022年 高考加油视频</title>
       <link href="/media/see_the_color/"/>
       <url>/media/see_the_color/</url>
@@ -112,6 +85,60 @@
             <tag> 毕业 </tag>
             
             <tag> 高中 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C++极简教程 第一章 C++基本概念</title>
+      <link href="/tech/cpp_easy_section_1/"/>
+      <url>/tech/cpp_easy_section_1/</url>
+      
+        <content type="html"><![CDATA[<p>本系列为C++的入门学习者服务，旨在于为此前毫无C++基础且未来要学习C++的学习者简单介绍关于C++语言最基础的部分知识，如果已入门C++，则不需要阅读本系列。</p><div class="story post-story"><h2 id="1-1-C-语言概述与框架"><a href="#1-1-C-语言概述与框架" class="headerlink" title="1.1 C++语言概述与框架"></a>1.1 C++语言概述与框架</h2><h3 id="1-典型实例"><a href="#1-典型实例" class="headerlink" title="1. 典型实例"></a>1. 典型实例</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> &lt;iostream＞ <span class="comment">//头文件包含指令 | “//”：注释符号 | “#”：编译指令</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; <span class="comment">//指定名字空间 | int：对应main函数返回整数</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> <span class="comment">//main函数 | 程序中有且仅有一个main函数</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="type">int</span> i, j; <span class="comment">//说明变量</span></span><br><span class="line">cout &lt;&lt; <span class="string">&quot;输入i和j: &quot;</span>; <span class="comment">//输出提示信息</span></span><br><span class="line">cin &gt;&gt; i &gt;&gt; j; <span class="comment">//从键盘上输入变量值 | cin &gt;&gt;：输入</span></span><br><span class="line">cout &lt;&lt; <span class="string">&quot;sum: &quot;</span> &lt;&lt; i + j &lt;&lt; endl; <span class="comment">//输出变量值 | cout &lt;&lt;：输出 | endl：输出换行</span></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>; <span class="comment">//返回结果</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//分号“;”：“语句”结束（#include是指令，int main()也是指令，不用分号）</span></span><br></pre></td></tr></table></figure><h3 id="2-C-程序的组成部分"><a href="#2-C-程序的组成部分" class="headerlink" title="2. C++程序的组成部分"></a>2. C++程序的组成部分</h3><p>常见的C++程序的默认框架</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> &lt;iostream＞</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="comment">//语句在此 xxxxxx;</span></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="3-C-中的注释"><a href="#3-C-中的注释" class="headerlink" title="3. C++中的注释"></a>3. C++中的注释</h3><p>注释的文字不会在程序运行的时候被执行，能起到解释代码的作用。</p><p>① 单行注释：以<code>//</code>开始，换行后结束。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a; <span class="comment">//我是注释我是注释我是注释</span></span><br></pre></td></tr></table></figure><p>② 多行注释：以 <code>/*</code>开始，以<code>*/</code>结束。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a;</span><br><span class="line"><span class="comment">/*我们是注释我们是注释我们是注释</span></span><br><span class="line"><span class="comment">我们是注释我们是注释我们是注释*/</span></span><br><span class="line"><span class="type">int</span> b;</span><br></pre></td></tr></table></figure><h3 id="4-C-的字符集-符号-关键字"><a href="#4-C-的字符集-符号-关键字" class="headerlink" title="4. C++的字符集.符号.关键字"></a>4. C++的字符集.符号.关键字</h3><p>字符集：只允许直接使用英文字符和阿拉伯数字。（其他字符不推荐使用）</p><p>标点符号：必须使用西文符号。</p><p>关键字：具有特定含义的英文单词，如<code>int</code>，不能另作他用。</p></div><div class="story post-story"><h2 id="1-2-C-中的数据类型"><a href="#1-2-C-中的数据类型" class="headerlink" title="1.2 C++中的数据类型"></a>1.2 C++中的数据类型</h2><p><strong>C++程序中的数据具备三种属性：数据类型，名字，值。</strong></p><h3 id="1-数据类型的意义"><a href="#1-数据类型的意义" class="headerlink" title="1. 数据类型的意义"></a>1. 数据类型的意义</h3><p>C++为强类型语言，所有变量应“先定义后使用”，数据类型定后无法修改。</p><h3 id="2-C-中的基本数据类型"><a href="#2-C-中的基本数据类型" class="headerlink" title="2. C++中的基本数据类型"></a>2. C++中的基本数据类型</h3><table><thead><tr><th align="center">数据类型</th><th align="left">代码表示</th></tr></thead><tbody><tr><td align="center">整数型</td><td align="left">int</td></tr><tr><td align="center">字符型</td><td align="left">char</td></tr><tr><td align="center">实数型</td><td align="left">float（单浮点数） double（双浮点数）</td></tr><tr><td align="center">逻辑型</td><td align="left">bool</td></tr></tbody></table><p>注：以上仅包含基本数据类型。</p><h4 id="1-整数型-int"><a href="#1-整数型-int" class="headerlink" title="(1)  整数型 int"></a>(1)  整数型 <code>int</code></h4><p>A. 定义：存放整数数据，存储数据长度和计算机字长有关系。</p><p>若定义1字节&#x3D;8位二进制数（即位数&#x3D;字节*8），<code>int</code>长度为4字节，容纳的范围就为-2<sup>31</sup>~2<sup>31</sup>-1。若数据超出范围，则会溢出。<br><strong>注：有关于溢出以及字长问题，请参考：<a href="/tech/twos_complement/">计算机补码相关知识</a></strong></p><p>B. 修饰：整型数据经修饰后可以有许多形式。</p><blockquote><p>int前可以用short，long，signed，unsigned修饰</p></blockquote><table><thead><tr><th align="center">类型</th><th align="center">长度</th><th align="center">范围</th><th>备注</th></tr></thead><tbody><tr><td align="center">(signed) short (int)</td><td align="center">2</td><td align="center">-2<sup>15</sup>~(2<sup>15</sup>-1)</td><td></td></tr><tr><td align="center">unsigned short (int)</td><td align="center">2</td><td align="center">0~(2<sup>16</sup>-1)</td><td></td></tr><tr><td align="center">(signed) long (int)</td><td align="center">4</td><td align="center">-2<sup>31</sup>~(2<sup>31</sup>-1)</td><td></td></tr><tr><td align="center">unsigned long (int)</td><td align="center">4</td><td align="center">0~(2<sup>32</sup>-1)</td><td></td></tr><tr><td align="center">(signed) (int)</td><td align="center">4</td><td align="center">-2<sup>31</sup>~(2<sup>31</sup>-1)</td><td></td></tr><tr><td align="center">unsigned (int)</td><td align="center">4</td><td align="center">0~(2<sup>32</sup>-1)</td><td></td></tr></tbody></table><ul><li><p><code>signed int</code>表述整数格式为补码，即将模劈开一半左边表示负数。</p></li><li><p><code>unsigned int</code>表示整数格式为纯数值类型（必然是正数），即将模全用于正数。</p></li><li><p>注：以上数据可能仅在32位编译器中生效，随编译环境不同长度也可能不同。</p><h1 id="未完待续······"><a href="#未完待续······" class="headerlink" title="未完待续······"></a>未完待续······</h1></li></ul></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 科技·编程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+            <tag> 教程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>补码 计算机系统数值表示</title>
+      <link href="/tech/twos_complement/"/>
+      <url>/tech/twos_complement/</url>
+      
+        <content type="html"><![CDATA[<div class="story post-story"><h2 id="1-真值与机器数"><a href="#1-真值与机器数" class="headerlink" title="1. 真值与机器数"></a>1. 真值与机器数</h2><p>真值是原来的数，机器数为相应存储在电脑内的二进制数。</p></div><div class="story post-story"><h2 id="2-模的概念"><a href="#2-模的概念" class="headerlink" title="2. 模的概念"></a>2. 模的概念</h2><p>一个计量系统的计数范围。</p><blockquote><p>生活实例：时钟的模为12，计量范围是0~11，11过后又回到 0。<br>n位计算机数的模为2<sup>n</sup>，计量范围是0~(2<sup>n</sup>-1)。</p></blockquote><blockquote><p>运用：n&#x3D;4，模为2<sup>4</sup>&#x3D;16，计量范围是0~15（二进制表示0000~1111）。如当前数15的二进制值为1111，则再加1，计数值就变为了0000，真值就变成了0，而在最高位上溢出了一个1。</p></blockquote></div><div class="story post-story"><h2 id="3-补码（以8位二进制为例）"><a href="#3-补码（以8位二进制为例）" class="headerlink" title="3. 补码（以8位二进制为例）"></a>3. 补码（以8位二进制为例）</h2><p>本质：用大的正数来表示小的负数，化减为加。</p><blockquote><p>生活实例：在时钟内：从8点调到5点，有8-3&#x3D;8+9，则-3&#x3D;9（绝对值相加等于模）</p></blockquote><h3 id="1-原理"><a href="#1-原理" class="headerlink" title="(1) 原理"></a>(1) 原理</h3><p>8位二进制数原本计数的范围是0~255，因需要表示负数使用补码，将128~255用来表示负数（-1~-128）其二进制首位为1，0~127不变仍表示正数（0~127）其二进制首位为0。</p><p><strong>若最终结果超出范围，可增加位数避免溢出。</strong></p><blockquote><p>例：若想记录数128，则需要将8位二进制数提升至16位，扩大计数范围避免溢出。</p></blockquote><h3 id="2-补码的二进制表示"><a href="#2-补码的二进制表示" class="headerlink" title="(2) 补码的二进制表示"></a>(2) 补码的二进制表示</h3><p>如果n是正数，补码就是其二进制，如果n是负数，补码则是n+256的二进制。</p><blockquote><p>「+73」补码 &#x3D; 01001001<br>「-73」补码 &#x3D; 10000000 - 01001001&#x3D;10110111（183的二进制）</p></blockquote><h3 id="3-补码的运算"><a href="#3-补码的运算" class="headerlink" title="(3) 补码的运算"></a>(3) 补码的运算</h3><p>① 真值到补码：</p><ul><li>当n是负数，可以通过其相反数各位<code>取反加1</code>来快速求出补码。</li></ul><blockquote><p>例：设n&#x3D;8，求-36补码。<br>36的二进制&#x3D;00100100<br>各位取反得11011011<br>末位加1结果为11011100即为补码</p></blockquote><p>② 补码到真值：</p><ul><li>如果补码最高位是1（即真值128以上，代表负数），将各位取反加一，转换为十进制再加负号。</li><li>如果补码最高位是0（即真值127以下，代表正数），直接转换为十进制即可。</li></ul><blockquote><p>例：假设n的八位补码是10101010，求n真值。<br>10101010取反加一&#x3D;01010110<br>01010110的十进制&#x3D;86<br>添加负号n&#x3D;-86</p></blockquote></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 科技·编程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教程 </tag>
+            
+            <tag> 原理 </tag>
             
         </tags>
       

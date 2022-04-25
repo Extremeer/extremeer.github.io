@@ -773,7 +773,7 @@ article#tag .all-tags ul li span:before {
   backdrop-filter: none;
 }
 .md .footer {
-  margin-top: 64px;
+  margin-top: 16px;
 }
 .md .footer >div {
   margin-top: 1em;
@@ -1506,10 +1506,10 @@ svg.loading {
 }
 #l_main .post .article-meta#top {
   margin-top: 16px;
-  margin-bottom: 32px;
+  margin-bottom: 0px;
 }
 #l_main .post .article-meta#bottom {
-  margin-top: 32px;
+  margin-top: 16px;
   margin-bottom: 8px;
 }
 #l_main .post .article-meta .aplayer,
@@ -1973,11 +1973,11 @@ img.lazyload:not(.placeholder).loaded {
 }
 .md h1:before,
 .md h2:before {
-  margin-top: -32px;
+  margin-top: -80px;
 }
 .md .article-meta+h1,
 .md .article-meta+h2 {
-  margin-top: -80px;
+  margin-top: -64px;
 }
 .md h3,
 .md h4,
@@ -1986,16 +1986,22 @@ img.lazyload:not(.placeholder).loaded {
   margin-bottom: 1em;
 }
 .md h3:before {
-  margin-top: -56px;
+  margin-top: -88px;
 }
 .md h4:before {
-  margin-top: -64px;
+  margin-top: -96px;
 }
-.md h5 {
+.md h5:before {
+  margin-top: -96px;
+}
+.md h6 {
   font-weight: bold;
 }
+.md h6:before {
+  margin-top: -96px;
+}
 .md h2+h3:before {
-  margin-top: -80px;
+  margin-top: -96px;
 }
 .md ul,
 .md ol {
