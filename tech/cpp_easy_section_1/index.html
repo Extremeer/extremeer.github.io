@@ -44,7 +44,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2021-03-09T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-04-26T01:29:08.599Z">
+<meta property="article:modified_time" content="2022-04-26T09:25:41.317Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="教程">
@@ -1837,7 +1837,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.3690b000.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.1d2dd3e0.js","rightMenus":"/js/plugins/rightMenus.3669cc79.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.06d40311.js"},"css":{"style":"/css/style.4781fcf9.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1650936737333),
+    lastupdate: new Date(1650965904352),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc","blogger","category","tagcloud"],
@@ -2794,7 +2794,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>若定义1字节&#x3D;8位二进制数（即位数&#x3D;字节*8），<code>int</code>长度为4字节，容纳的范围就为-2<sup>31</sup>~2<sup>31</sup>-1。若数据超出范围，则会溢出。<br><strong>注：有关于溢出以及字长问题，请参考：<a href="/tech/twos_complement/">计算机补码相关知识</a></strong></p>
 <p>B. 修饰：整型数据经修饰后可以有许多形式。</p>
 <blockquote>
-<p>int前可以用short，long，signed，unsigned修饰</p>
+<p><code>int</code>前可以用<code>short</code>，<code>long</code>，<code>signed</code>，<code>unsigned</code>修饰</p>
 </blockquote>
 <table>
 <thead>
@@ -2802,44 +2802,37 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <th align="center">类型</th>
 <th align="center">长度</th>
 <th align="center">范围</th>
-<th>备注</th>
 </tr>
 </thead>
 <tbody><tr>
 <td align="center">(signed) short (int)</td>
 <td align="center">2</td>
 <td align="center">-2<sup>15</sup>~(2<sup>15</sup>-1)</td>
-<td></td>
 </tr>
 <tr>
 <td align="center">unsigned short (int)</td>
 <td align="center">2</td>
 <td align="center">0~(2<sup>16</sup>-1)</td>
-<td></td>
 </tr>
 <tr>
 <td align="center">(signed) long (int)</td>
 <td align="center">4</td>
 <td align="center">-2<sup>31</sup>~(2<sup>31</sup>-1)</td>
-<td></td>
 </tr>
 <tr>
 <td align="center">unsigned long (int)</td>
 <td align="center">4</td>
 <td align="center">0~(2<sup>32</sup>-1)</td>
-<td></td>
 </tr>
 <tr>
 <td align="center">(signed) (int)</td>
 <td align="center">4</td>
 <td align="center">-2<sup>31</sup>~(2<sup>31</sup>-1)</td>
-<td></td>
 </tr>
 <tr>
 <td align="center">unsigned (int)</td>
 <td align="center">4</td>
 <td align="center">0~(2<sup>32</sup>-1)</td>
-<td></td>
 </tr>
 </tbody></table>
 <ul>
@@ -2848,8 +2841,210 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p><code>unsigned int</code>表示整数格式为纯数值类型（必然是正数），即将模全用于正数。</p>
 </li>
 <li><p>注：以上数据可能仅在32位编译器中生效，随编译环境不同长度也可能不同。</p>
-<h1 id="未完待续······"><a href="#未完待续······" class="headerlink" title="未完待续······"></a>未完待续······</h1></li>
+</li>
 </ul>
+<h4 id="2-字符型-char"><a href="#2-字符型-char" class="headerlink" title="(2)  字符型 char"></a>(2)  字符型 <code>char</code></h4><p>字符类型保存单个字符，存储的为该字符的ASCII码数值，长度为一个字节。</p>
+<p>字符类型本质上也属于整数，也可以用<code>signed</code>和<code>unsigned</code>修饰。</p>
+<p>注：关于ASCII码：128个常用字符指定数值编码，范围0～127。</p>
+<p>A. ASCII码前32位为控制字符，有特定功能但无法直接输入和表示。</p>
+<p>B. 需要记住的ASCII码数值：字符0为48，字符A为65，字符a为97。（先大写后小写：小写比大写多32）</p>
+<h4 id="3-实数型-float-double"><a href="#3-实数型-float-double" class="headerlink" title="(3) 实数型 float double"></a>(3) 实数型 <code>float</code> <code>double</code></h4><p>单精度<code>float</code>与双精度<code>double</code>都用来存放实数，但精度不同。</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>长度</th>
+<th>范围</th>
+<th>精度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>float</td>
+<td>4</td>
+<td>约-10<sup>38</sup>~10<sup>38</sup></td>
+<td>6~7</td>
+</tr>
+<tr>
+<td>double</td>
+<td>8</td>
+<td>约-10<sup>308</sup>~10<sup>308</sup></td>
+<td>15~16</td>
+</tr>
+</tbody></table>
+<br/>
+
+<br/>
+
+<h4 id="4-逻辑类型-bool"><a href="#4-逻辑类型-bool" class="headerlink" title="(4) 逻辑类型 bool"></a>(4) 逻辑类型 <code>bool</code></h4><p>取值只能为<code>true</code>或<code>false</code>。</p>
+<p>存储字节数通常为1个字节。</p>
+<p><code>bool</code>型在运算中可以和整型相互转化：<code>false=0</code>，<code>true=1</code>。</p>
+</div><div class="story post-story"><h2 id="1-3-C-中的变量和常量"><a href="#1-3-C-中的变量和常量" class="headerlink" title="1.3 C++中的变量和常量"></a>1.3 C++中的变量和常量</h2><h3 id="1-C-中的变量"><a href="#1-C-中的变量" class="headerlink" title="1. C++中的变量"></a>1. C++中的变量</h3><ul>
+<li><p>变量必须先定义后使用且无法更改。</p>
+</li>
+<li><p>变量必须使用标识符进行标识，即变量名。</p>
+</li>
+</ul>
+<blockquote>
+<p>定义变量实例：<code>int a, b;</code></p>
+</blockquote>
+<ul>
+<li>定义变量的同时赋值，即为初始化，可以避免随机值。如<code>int a = 0</code>。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>初始化语句</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>int a;</td>
+<td>默认初始化（随机）</td>
+</tr>
+<tr>
+<td>int a &#x3D; 3;</td>
+<td>赋值初始化</td>
+</tr>
+<tr>
+<td>int a(3);</td>
+<td>构造初始化</td>
+</tr>
+<tr>
+<td>int a{3};</td>
+<td>列表初始化</td>
+</tr>
+<tr>
+<td>int a &#x3D; {3};</td>
+<td>列表初始化的赋值写法</td>
+</tr>
+</tbody></table>
+<br/>
+
+<br/>
+
+<h3 id="2-C-中的字面常量"><a href="#2-C-中的字面常量" class="headerlink" title="2. C++中的字面常量"></a>2. C++中的字面常量</h3><p>字面常量指程序中直接给出的量，执行过程中值不变。</p>
+<h4 id="1-整数常量"><a href="#1-整数常量" class="headerlink" title="(1) 整数常量"></a>(1) 整数常量</h4><table>
+<thead>
+<tr>
+<th>整数常量</th>
+<th>格式</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>十进制整数</td>
+<td>与实际使用的格式一致</td>
+<td>38</td>
+</tr>
+<tr>
+<td>八进制整数</td>
+<td>以0开始的整数为八进制整数</td>
+<td>077</td>
+</tr>
+<tr>
+<td>十六进制整数</td>
+<td>以0X（大小写都可）开始的整数</td>
+<td>0x5abc</td>
+</tr>
+<tr>
+<td>注：整数后缀</td>
+<td>整数后加L(long)或U(unsigned)表示长整数或无符号整数（大小写都可）</td>
+<td>84L 0x32LU</td>
+</tr>
+</tbody></table>
+<br/>
+
+<br/>
+
+<h4 id="2-实数常量"><a href="#2-实数常量" class="headerlink" title="(2) 实数常量"></a>(2) 实数常量</h4><ul>
+<li><p>定点格式与日常书写相同。如：<code>0.23</code>。</p>
+</li>
+<li><p>指数格式为尾数乘10的次方，“十”用E或e表示，次方必须为整。如：<code>0.3e-2</code>。</p>
+</li>
+<li><p>实数常量使用的时候应避免不精确问题。</p>
+</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">bool</span> a;</span><br><span class="line">a = ( <span class="number">0.1</span> + <span class="number">0.2</span> == <span class="number">0.3</span> ); <span class="comment">//0.1 + 0.2 实数相加并不是准确 = 0.3</span></span><br><span class="line">cout &lt;&lt; a; <span class="comment">//结果为0（false）</span></span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h4 id="3-字符常量"><a href="#3-字符常量" class="headerlink" title="(3) 字符常量"></a>(3) 字符常量</h4><p>用一对单引号引的单个字符，类型是char，在内存中保存的值是字符的ASCII码值。如：<code>&#39;a&#39;</code> <code>&#39;@&#39;</code></p>
+<p>注：转义字符：控制字符无法直接显示和输入，用转义字符间接表示。</p>
+<p>常用的转义字符：</p>
+<table>
+<thead>
+<tr>
+<th>转义字符</th>
+<th>含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>‘\n’</td>
+<td>回车</td>
+<td></td>
+</tr>
+<tr>
+<td>‘\t’</td>
+<td>横向制表</td>
+<td>一个制表为8位，输出整齐</td>
+</tr>
+<tr>
+<td>‘\nnn’</td>
+<td>任意字符8进制（ASCII）转义</td>
+<td>如：‘\101’代表字符A</td>
+</tr>
+<tr>
+<td>‘\xnn’</td>
+<td>任意字符16进制（ASCII）转义</td>
+<td>如：‘\x41’字符字符A<font color=red>（x必须小写<font>）</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>例：C++中的三个“零”：</p>
+<table>
+<thead>
+<tr>
+<th>形式</th>
+<th>类型</th>
+<th>长度</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>整数</td>
+<td>4</td>
+<td>0</td>
+</tr>
+<tr>
+<td>‘0’</td>
+<td>字符</td>
+<td>1</td>
+<td>48</td>
+</tr>
+<tr>
+<td>‘\0’</td>
+<td>字符</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody></table>
+</blockquote>
+<br/>
+
+<h4 id="4-字符串常量"><a href="#4-字符串常量" class="headerlink" title="(4) 字符串常量"></a>(4) 字符串常量</h4><p>用一对双引号引起来的若干字符（可以为空）。如：<code>&quot;123&quot;</code> <code>&quot;&quot;</code></p>
+<p>在内存中存放字符串的时候，在最后存放了一个隐藏的<code>&#39;\0&#39;</code>。</p>
+<blockquote>
+<p>如：<code>&quot;a&quot;</code>长度为2，而<code>&#39;a&#39;</code>长度为1。</p>
+</blockquote>
+<br/>
+
+<h4 id="5-常变量"><a href="#5-常变量" class="headerlink" title="(5) 常变量"></a>(5) 常变量</h4><p>用<code>const</code>修饰变量使其无法更改，称之为常变量。</p>
+<blockquote>
+<p>如：<code>const float PI = 3.14159;</code></p>
+</blockquote>
+<p>常变量必须且只能在定义的时候初始化，且之后无法更改。</p>
 
 </div>
   </div>
@@ -2882,7 +3077,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-26T09:29:08+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-26T17:25:41+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年4月26日</p>
@@ -3032,7 +3227,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-C-%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0%E4%B8%8E%E6%A1%86%E6%9E%B6"><span class="toc-text">1.1 C++语言概述与框架</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%85%B8%E5%9E%8B%E5%AE%9E%E4%BE%8B"><span class="toc-text">1. 典型实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-C-%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86"><span class="toc-text">2. C++程序的组成部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-C-%E4%B8%AD%E7%9A%84%E6%B3%A8%E9%87%8A"><span class="toc-text">3. C++中的注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-C-%E7%9A%84%E5%AD%97%E7%AC%A6%E9%9B%86-%E7%AC%A6%E5%8F%B7-%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-text">4. C++的字符集.符号.关键字</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-C-%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">1.2 C++中的数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%84%8F%E4%B9%89"><span class="toc-text">1. 数据类型的意义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-C-%E4%B8%AD%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">2. C++中的基本数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E6%95%B4%E6%95%B0%E5%9E%8B-int"><span class="toc-text">(1)  整数型 int</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-C-%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0%E4%B8%8E%E6%A1%86%E6%9E%B6"><span class="toc-text">1.1 C++语言概述与框架</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%85%B8%E5%9E%8B%E5%AE%9E%E4%BE%8B"><span class="toc-text">1. 典型实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-C-%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86"><span class="toc-text">2. C++程序的组成部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-C-%E4%B8%AD%E7%9A%84%E6%B3%A8%E9%87%8A"><span class="toc-text">3. C++中的注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-C-%E7%9A%84%E5%AD%97%E7%AC%A6%E9%9B%86-%E7%AC%A6%E5%8F%B7-%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-text">4. C++的字符集.符号.关键字</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-C-%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">1.2 C++中的数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%84%8F%E4%B9%89"><span class="toc-text">1. 数据类型的意义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-C-%E4%B8%AD%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">2. C++中的基本数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E6%95%B4%E6%95%B0%E5%9E%8B-int"><span class="toc-text">(1)  整数型 int</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%AD%97%E7%AC%A6%E5%9E%8B-char"><span class="toc-text">(2)  字符型 char</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%AE%9E%E6%95%B0%E5%9E%8B-float-double"><span class="toc-text">(3) 实数型 float double</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E9%80%BB%E8%BE%91%E7%B1%BB%E5%9E%8B-bool"><span class="toc-text">(4) 逻辑类型 bool</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-C-%E4%B8%AD%E7%9A%84%E5%8F%98%E9%87%8F%E5%92%8C%E5%B8%B8%E9%87%8F"><span class="toc-text">1.3 C++中的变量和常量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-C-%E4%B8%AD%E7%9A%84%E5%8F%98%E9%87%8F"><span class="toc-text">1. C++中的变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-C-%E4%B8%AD%E7%9A%84%E5%AD%97%E9%9D%A2%E5%B8%B8%E9%87%8F"><span class="toc-text">2. C++中的字面常量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E6%95%B4%E6%95%B0%E5%B8%B8%E9%87%8F"><span class="toc-text">(1) 整数常量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%AE%9E%E6%95%B0%E5%B8%B8%E9%87%8F"><span class="toc-text">(2) 实数常量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%AD%97%E7%AC%A6%E5%B8%B8%E9%87%8F"><span class="toc-text">(3) 字符常量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E9%87%8F"><span class="toc-text">(4) 字符串常量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E5%B8%B8%E5%8F%98%E9%87%8F"><span class="toc-text">(5) 常变量</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -4504,7 +4699,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Extremeer 极振科技传媒工作室","url":"https://extremeer.github.io/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://extremeer.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://extremeer.github.io/","name":"Extremeer 极振科技传媒工作室"}},{"@type":"ListItem","position":2,"item":{"@id":"https://extremeer.github.io/categories/科技·编程/","name":"科技·编程"}},{"@type":"ListItem","position":3,"item":{"@id":"https://extremeer.github.io/tech/cpp_easy_section_1/","name":"C++极简教程 第一章 C++基本概念"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"C++极简教程 第一章 C++基本概念","description":"本系列为C++的入门学习者服务，旨在于为此前毫无C++基础且未来要学习C++的学习者简单介绍关于C++语言最基础的部分知识，如果已入门C++，则不需要阅读本系列。","datePublished":"2021-03-09T16:00:00.000Z","dateModified":"2022-04-26T01:29:08.599Z","inLanguage":["zh-CN","en","zh-HK","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://extremeer.github.io/tech/cpp_easy_section_1/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://extremeer.github.io/"},"publisher":{"@type":"Organization","name":"Extremeer 极振科技传媒工作室","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://extremeer.github.io/tech/cpp_easy_section_1/","wordCount":0,"articleSection":"科技·编程","keywords":"C++,教程","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Extremeer 极振科技传媒工作室","url":"https://extremeer.github.io/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://extremeer.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://extremeer.github.io/","name":"Extremeer 极振科技传媒工作室"}},{"@type":"ListItem","position":2,"item":{"@id":"https://extremeer.github.io/categories/科技·编程/","name":"科技·编程"}},{"@type":"ListItem","position":3,"item":{"@id":"https://extremeer.github.io/tech/cpp_easy_section_1/","name":"C++极简教程 第一章 C++基本概念"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"C++极简教程 第一章 C++基本概念","description":"本系列为C++的入门学习者服务，旨在于为此前毫无C++基础且未来要学习C++的学习者简单介绍关于C++语言最基础的部分知识，如果已入门C++，则不需要阅读本系列。","datePublished":"2021-03-09T16:00:00.000Z","dateModified":"2022-04-26T09:25:41.317Z","inLanguage":["zh-CN","en","zh-HK","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://extremeer.github.io/tech/cpp_easy_section_1/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://extremeer.github.io/"},"publisher":{"@type":"Organization","name":"Extremeer 极振科技传媒工作室","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://extremeer.github.io/tech/cpp_easy_section_1/","wordCount":0,"articleSection":"科技·编程","keywords":"C++,教程","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
