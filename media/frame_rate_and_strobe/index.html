@@ -44,7 +44,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-05-03T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-05-03T17:02:43.297Z">
+<meta property="article:modified_time" content="2022-05-04T01:54:49.898Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="教程">
 <meta property="article:tag" content="原理">
@@ -1837,7 +1837,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.3690b000.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.1d2dd3e0.js","rightMenus":"/js/plugins/rightMenus.3669cc79.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.06d40311.js"},"css":{"style":"/css/style.4781fcf9.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1651597672666),
+    lastupdate: new Date(1651629481857),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc","blogger","category","tagcloud"],
@@ -2780,7 +2780,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <center>可以看到每一帧的亮度是不同的</center>
 
 <p><font size = 4>而在规避频闪的方法中，匹配帧率通常是最简单的。</font></p>
-<p><font size = 6><strong>帧率方案：将视频帧率设定为光源闪烁频率的倍数。</strong></font></p>
+<p><font size = 6><strong>帧率方案：设置帧率，让光源闪烁频率被这个帧率整除。</strong></font></p>
 <blockquote>
 <p>假设在中国PAL制式下拍摄视频，因为用电频率是50Hz，光闪烁频率为100Hz，则大多数时候只需要设置25或者50fps，就能在多数情况下避免频闪。</p>
 <p>如果在如北美NTSC制式下拍摄视频，就相应选择30或者60fps。</p>
@@ -2809,9 +2809,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<p><font size = 6><strong>快门方案：将快门速度设定为光源闪烁频率的倍数。</strong></font></p>
+<p><font size = 6><strong>快门方案：设置快门速度，让光源闪烁频率被这个快门速度整除。</strong></font></p>
 <blockquote>
-<p>如：中国供电频率50Hz，将快门速度设定为1&#x2F;50或1&#x2F;100即可解决。</p>
+<p>如：中国供电频率50Hz，光闪烁频率为100Hz，将快门速度设定为1&#x2F;50或1&#x2F;100即可解决。</p>
 </blockquote>
 <p>这个选项通常不好确定。在调整快门速度的同时，你也要避免慢速快门而导致运动模糊的产生。</p>
 <h3 id="④-帧率与快门速度的混合运用"><a href="#④-帧率与快门速度的混合运用" class="headerlink" title="④ 帧率与快门速度的混合运用"></a>④ 帧率与快门速度的混合运用</h3><ol>
@@ -2862,7 +2862,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-04T01:02:43+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-04T09:54:49+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年5月4日</p>
@@ -4475,7 +4475,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Extremeer 极振科技传媒工作室","url":"https://extremeer.github.io/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://extremeer.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://extremeer.github.io/","name":"Extremeer 极振科技传媒工作室"}},{"@type":"ListItem","position":2,"item":{"@id":"https://extremeer.github.io/categories/传媒·教程/","name":"传媒·教程"}},{"@type":"ListItem","position":3,"item":{"@id":"https://extremeer.github.io/media/frame_rate_and_strobe/","name":"视频频闪的快速解决方案"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"视频频闪的快速解决方案","description":"在拍摄视频时，有时镜头前的灯光或屏幕录制下来后会有相应频闪，灯光忽明忽暗。频闪与帧率、快门速度、用电频率的关系息息相关。","datePublished":"2022-05-03T16:00:00.000Z","dateModified":"2022-05-03T17:02:43.297Z","inLanguage":["zh-CN","en","zh-HK","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://extremeer.github.io/media/frame_rate_and_strobe/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://extremeer.github.io/"},"publisher":{"@type":"Organization","name":"Extremeer 极振科技传媒工作室","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://extremeer.github.io/media/frame_rate_and_strobe/","wordCount":0,"articleSection":"传媒·教程","keywords":"教程,原理","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Extremeer 极振科技传媒工作室","url":"https://extremeer.github.io/","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://extremeer.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://extremeer.github.io/","name":"Extremeer 极振科技传媒工作室"}},{"@type":"ListItem","position":2,"item":{"@id":"https://extremeer.github.io/categories/传媒·教程/","name":"传媒·教程"}},{"@type":"ListItem","position":3,"item":{"@id":"https://extremeer.github.io/media/frame_rate_and_strobe/","name":"视频频闪的快速解决方案"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"视频频闪的快速解决方案","description":"在拍摄视频时，有时镜头前的灯光或屏幕录制下来后会有相应频闪，灯光忽明忽暗。频闪与帧率、快门速度、用电频率的关系息息相关。","datePublished":"2022-05-03T16:00:00.000Z","dateModified":"2022-05-04T01:54:49.898Z","inLanguage":["zh-CN","en","zh-HK","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://extremeer.github.io/media/frame_rate_and_strobe/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://extremeer.github.io/"},"publisher":{"@type":"Organization","name":"Extremeer 极振科技传媒工作室","logo":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://extremeer.github.io/media/frame_rate_and_strobe/","wordCount":0,"articleSection":"传媒·教程","keywords":"教程,原理","image":{"@type":"ImageObject","url":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
