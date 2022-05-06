@@ -172,6 +172,33 @@
     
     
     <entry>
+      <title>「计算机科普」补码 计算机系统数值表示</title>
+      <link href="/tech/twos_complement/"/>
+      <url>/tech/twos_complement/</url>
+      
+        <content type="html"><![CDATA[<div class="story post-story"><h2 id="1-真值与机器数"><a href="#1-真值与机器数" class="headerlink" title="1. 真值与机器数"></a>1. 真值与机器数</h2><p>真值是原来的数，机器数为相应存储在电脑内的二进制数。</p></div><div class="story post-story"><h2 id="2-模的概念"><a href="#2-模的概念" class="headerlink" title="2. 模的概念"></a>2. 模的概念</h2><p>一个计量系统的计数范围。</p><blockquote><p>生活实例：时钟的模为12，计量范围是0~11，11过后又回到 0。<br>n位计算机数的模为2<sup>n</sup>，计量范围是0~(2<sup>n</sup>-1)。</p></blockquote><blockquote><p>运用：n&#x3D;4，模为2<sup>4</sup>&#x3D;16，计量范围是0~15（二进制表示0000~1111）。如当前数15的二进制值为1111，则再加1，计数值就变为了0000，真值就变成了0，而在最高位上溢出了一个1。</p></blockquote></div><div class="story post-story"><h2 id="3-补码（以8位二进制为例）"><a href="#3-补码（以8位二进制为例）" class="headerlink" title="3. 补码（以8位二进制为例）"></a>3. 补码（以8位二进制为例）</h2><p>本质：用大的正数来表示小的负数，化减为加。</p><blockquote><p>生活实例：在时钟内：从8点调到5点，有8-3&#x3D;8+9，则-3&#x3D;9（绝对值相加等于模）</p></blockquote><h3 id="1-原理"><a href="#1-原理" class="headerlink" title="(1) 原理"></a>(1) 原理</h3><p>8位二进制数原本计数的范围是0~255，因需要表示负数使用补码，将128~255用来表示负数（-1~-128）其二进制首位为1，0~127不变仍表示正数（0~127）其二进制首位为0。</p><p><strong>若最终结果超出范围，可增加位数避免溢出。</strong></p><blockquote><p>例：若想记录数128，则需要将8位二进制数提升至16位，扩大计数范围避免溢出。</p></blockquote><h3 id="2-补码的二进制表示"><a href="#2-补码的二进制表示" class="headerlink" title="(2) 补码的二进制表示"></a>(2) 补码的二进制表示</h3><p>如果n是正数，补码就是其二进制，如果n是负数，补码则是n+256的二进制。</p><blockquote><p>「+73」补码 &#x3D; 01001001<br>「-73」补码 &#x3D; 10000000 - 01001001&#x3D;10110111（183的二进制）</p></blockquote><h3 id="3-补码的运算"><a href="#3-补码的运算" class="headerlink" title="(3) 补码的运算"></a>(3) 补码的运算</h3><p>① 真值到补码：</p><ul><li>当n是负数，可以通过其相反数各位<code>取反加1</code>来快速求出补码。</li></ul><blockquote><p>例：设n&#x3D;8，求-36补码。<br>36的二进制&#x3D;00100100<br>各位取反得11011011<br>末位加1结果为11011100即为补码</p></blockquote><p>② 补码到真值：</p><ul><li>如果补码最高位是1（即真值128以上，代表负数），将各位取反加一，转换为十进制再加负号。</li><li>如果补码最高位是0（即真值127以下，代表正数），直接转换为十进制即可。</li></ul><blockquote><p>例：假设n的八位补码是10101010，求n真值。<br>10101010取反加一&#x3D;01010110<br>01010110的十进制&#x3D;86<br>添加负号n&#x3D;-86</p></blockquote></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 科技·编程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教程 </tag>
+            
+            <tag> 原理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>「ASIDE AGES 独白岁月」玉溪师院附中 2021届 1 班 毕业视频</title>
       <link href="/media/aside_ages/"/>
       <url>/media/aside_ages/</url>
@@ -193,33 +220,6 @@
             <tag> 毕业 </tag>
             
             <tag> 高中 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>「计算机科普」补码 计算机系统数值表示</title>
-      <link href="/tech/twos_complement/"/>
-      <url>/tech/twos_complement/</url>
-      
-        <content type="html"><![CDATA[<div class="story post-story"><h2 id="1-真值与机器数"><a href="#1-真值与机器数" class="headerlink" title="1. 真值与机器数"></a>1. 真值与机器数</h2><p>真值是原来的数，机器数为相应存储在电脑内的二进制数。</p></div><div class="story post-story"><h2 id="2-模的概念"><a href="#2-模的概念" class="headerlink" title="2. 模的概念"></a>2. 模的概念</h2><p>一个计量系统的计数范围。</p><blockquote><p>生活实例：时钟的模为12，计量范围是0~11，11过后又回到 0。<br>n位计算机数的模为2<sup>n</sup>，计量范围是0~(2<sup>n</sup>-1)。</p></blockquote><blockquote><p>运用：n&#x3D;4，模为2<sup>4</sup>&#x3D;16，计量范围是0~15（二进制表示0000~1111）。如当前数15的二进制值为1111，则再加1，计数值就变为了0000，真值就变成了0，而在最高位上溢出了一个1。</p></blockquote></div><div class="story post-story"><h2 id="3-补码（以8位二进制为例）"><a href="#3-补码（以8位二进制为例）" class="headerlink" title="3. 补码（以8位二进制为例）"></a>3. 补码（以8位二进制为例）</h2><p>本质：用大的正数来表示小的负数，化减为加。</p><blockquote><p>生活实例：在时钟内：从8点调到5点，有8-3&#x3D;8+9，则-3&#x3D;9（绝对值相加等于模）</p></blockquote><h3 id="1-原理"><a href="#1-原理" class="headerlink" title="(1) 原理"></a>(1) 原理</h3><p>8位二进制数原本计数的范围是0~255，因需要表示负数使用补码，将128~255用来表示负数（-1~-128）其二进制首位为1，0~127不变仍表示正数（0~127）其二进制首位为0。</p><p><strong>若最终结果超出范围，可增加位数避免溢出。</strong></p><blockquote><p>例：若想记录数128，则需要将8位二进制数提升至16位，扩大计数范围避免溢出。</p></blockquote><h3 id="2-补码的二进制表示"><a href="#2-补码的二进制表示" class="headerlink" title="(2) 补码的二进制表示"></a>(2) 补码的二进制表示</h3><p>如果n是正数，补码就是其二进制，如果n是负数，补码则是n+256的二进制。</p><blockquote><p>「+73」补码 &#x3D; 01001001<br>「-73」补码 &#x3D; 10000000 - 01001001&#x3D;10110111（183的二进制）</p></blockquote><h3 id="3-补码的运算"><a href="#3-补码的运算" class="headerlink" title="(3) 补码的运算"></a>(3) 补码的运算</h3><p>① 真值到补码：</p><ul><li>当n是负数，可以通过其相反数各位<code>取反加1</code>来快速求出补码。</li></ul><blockquote><p>例：设n&#x3D;8，求-36补码。<br>36的二进制&#x3D;00100100<br>各位取反得11011011<br>末位加1结果为11011100即为补码</p></blockquote><p>② 补码到真值：</p><ul><li>如果补码最高位是1（即真值128以上，代表负数），将各位取反加一，转换为十进制再加负号。</li><li>如果补码最高位是0（即真值127以下，代表正数），直接转换为十进制即可。</li></ul><blockquote><p>例：假设n的八位补码是10101010，求n真值。<br>10101010取反加一&#x3D;01010110<br>01010110的十进制&#x3D;86<br>添加负号n&#x3D;-86</p></blockquote></div>]]></content>
-      
-      
-      <categories>
-          
-          <category> 科技·编程 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 教程 </tag>
-            
-            <tag> 原理 </tag>
             
         </tags>
       
