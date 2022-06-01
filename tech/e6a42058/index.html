@@ -44,7 +44,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://blogsources-1305284863.file.myqcloud.com/extremeer/image/mobile_extremeer_logo.png">
 <meta property="article:published_time" content="2022-05-05T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-05-07T10:25:50.062Z">
+<meta property="article:modified_time" content="2022-06-01T15:21:46.359Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="教程">
@@ -1837,7 +1837,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.3690b000.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.1d2dd3e0.js","rightMenus":"/js/plugins/rightMenus.3669cc79.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.06d40311.js"},"css":{"style":"/css/style.4781fcf9.css"}},
     default: {"avatar":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://npm.elemecdn.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1653056077370),
+    lastupdate: new Date(1654099571290),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc","blogger","category","tagcloud"],
@@ -2733,7 +2733,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>返回值：数量只能为<code>0</code>个或<code>1</code>个，用关键词<code>return</code>实现，且代码运行时遇<code>return</code>自动结束该函数。如果没有返回值，函数名前的返回值类型用<code>void</code>表示。</li>
 </ul>
 <p>例1：有参有返函数：编写一个自定义函数max求两数的较大数。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">max</span><span class="params">(<span class="type">int</span> a , <span class="type">int</span> b)</span> <span class="comment">//每一个参数独立，即不能写成int a, b</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> c = a &gt; b ? a : b;</span><br><span class="line">	<span class="keyword">return</span> c; <span class="comment">//通过该语句返回结果</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">max</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> <span class="comment">//每一个参数独立，即不能写成int a, b</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> c = a &gt; b ? a : b;</span><br><span class="line">	<span class="keyword">return</span> c; <span class="comment">//通过该语句返回结果</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>例2：无参无返函数：打印函数print。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">print</span> <span class="params">(<span class="type">void</span>)</span> <span class="comment">//参数的void可省略</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;*********&quot;</span> &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;*example*&quot;</span> &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;*********&quot;</span> &lt;&lt; endl;</span><br><span class="line">&#125; <span class="comment">//本函数仅仅实现打印的功能，无数据处理</span></span><br></pre></td></tr></table></figure>
@@ -2753,11 +2753,246 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>递推法（欧几里得算法或辗转相除法）：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">gcd</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> <span class="comment">//注意分析返回和参数类型</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> c = a % b; <span class="comment">//c是a除以b的余数</span></span><br><span class="line">    <span class="keyword">while</span>(c != <span class="number">0</span>) <span class="comment">//欧几里得算法递推求解</span></span><br><span class="line">    &#123;</span><br><span class="line">        a = b;</span><br><span class="line">        b = c;</span><br><span class="line">        c = a % b;</span><br><span class="line">    &#125;</span><br><span class="line">	<span class="keyword">return</span> b; <span class="comment">//返回最后的结果</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="5-函数定义小结"><a href="#5-函数定义小结" class="headerlink" title="5.函数定义小结"></a>5.函数定义小结</h3><ol>
+<h3 id="5-函数定义小结"><a href="#5-函数定义小结" class="headerlink" title="5. 函数定义小结"></a>5. 函数定义小结</h3><ol>
 <li>分析清楚函数所需的参数和能提供的返回值至关重要。</li>
 <li>在函数实现过程中需要的辅助变量，不能作为参数来使用，只能定义在函数的内部。</li>
 <li>遇到<code>return</code>语句之后函数自动结束，因此一般将<code>return</code>语句放在函数的最后。</li>
 </ol>
+</div><div class="story post-story"><h2 id="3-2-函数的调用和声明"><a href="#3-2-函数的调用和声明" class="headerlink" title="3.2 函数的调用和声明"></a>3.2 函数的调用和声明</h2><h3 id="1-函数的调用过程"><a href="#1-函数的调用过程" class="headerlink" title="1. 函数的调用过程"></a>1. 函数的调用过程</h3><ol>
+<li>主调函数将参数（实际参数）传递给自定义函数，并暂停主调函数的运行。</li>
+<li>自定义函数根据得到的参数（形式参数）值进行计算，并得出返回值结果。</li>
+<li>自定义函数将返回值回传给主调函数，结束自定义函数并继续主调函数的运行。</li>
+</ol>
+<h3 id="2-函数的三种调用情况"><a href="#2-函数的三种调用情况" class="headerlink" title="2. 函数的三种调用情况"></a>2. 函数的三种调用情况</h3><ul>
+<li><p>系统函数：</p>
+<ul>
+<li>包含所在的头文件</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">sqrt</span>(<span class="number">3</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>自定义函数：</p>
+<ul>
+<li>先定义，再调用，可以直接调用</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">max</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> c = a &gt; b ? a : b;</span><br><span class="line">	<span class="keyword">return</span> c;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">max</span>(<span class="number">3</span>, <span class="number">4</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>先调用，再定义，则需补充声明</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">max</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span></span>;<span class="comment">//声明函数（见下一小节）</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">max</span>(<span class="number">3</span>,<span class="number">4</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">max</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> c = a &gt; b ? a : b;</span><br><span class="line">	<span class="keyword">return</span> c;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="3-函数的声明"><a href="#3-函数的声明" class="headerlink" title="3. 函数的声明"></a>3. 函数的声明</h3><blockquote>
+<p>从结构化程序设计的角度，通常是先调用后定义。</p>
+<p>而先调用后定义要先声明函数避免系统由上到下执行语句时函数名未定义。</p>
+</blockquote>
+<p>函数声明是将函数头添加分号而构成的语句，参数名可以省略。</p>
+<p>例：</p>
+<ul>
+<li>int max(int a, int b);</li>
+<li>void print(void);</li>
+<li>int gcd(int, int); &#x2F;&#x2F;省略参数名</li>
+</ul>
+<h3 id="4-函数的参数传递"><a href="#4-函数的参数传递" class="headerlink" title="4. 函数的参数传递"></a>4. 函数的参数传递</h3><h4 id="1-两种参数"><a href="#1-两种参数" class="headerlink" title="(1) 两种参数"></a>(1) 两种参数</h4><table>
+<thead>
+<tr>
+<th>参数种类</th>
+<th>参数定义</th>
+<th>格式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>实际参数（实参）</td>
+<td>调用函数实际需要参与运算的参数</td>
+<td>常量、变量、表达式</td>
+</tr>
+<tr>
+<td>形式参数（形参）</td>
+<td>声明函数的时候用来占位的参数</td>
+<td>变量</td>
+</tr>
+</tbody></table>
+<p>注：<code>实参</code>和<code>形参</code>个数和排列顺序一一对应，并且对应的参数应<code>类型匹配</code>（<code>赋值兼容</code>）。</p>
+<h4 id="2-传递过程"><a href="#2-传递过程" class="headerlink" title="(2) 传递过程"></a>(2) 传递过程</h4><p>先计算<code>实参</code>表达式的值，再将该值传递（拷贝）给对应的<code>形参</code>变量。</p>
+<blockquote>
+<p>注：<code>实参</code>与<code>形参</code>的<code>单向传递</code>（<code>拷贝</code>的解释）</p>
+<p><code>形参</code>具备自己的存储空间，和<code>实参</code>的关系是<code>单向传递</code>关系。对<code>形参</code>的赋值<strong>不会影响</strong>对应的<code>实参</code>！</p>
+</blockquote>
+<p>例1：单向传递的示例</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">f</span><span class="params">(<span class="type">int</span> a)</span> <span class="comment">//a为形参</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ++a;</span><br><span class="line">    cout &lt;&lt; a &lt;&lt; <span class="string">&#x27; &#x27;</span>; <span class="comment">//输出行1</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> x = <span class="number">100</span>; <span class="comment">//x为实参</span></span><br><span class="line">    <span class="built_in">f</span>(x);</span><br><span class="line">    cout &lt;&lt; x &lt;&lt; endl; <span class="comment">//输出行2</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 输出结果为101 100 即x的值不变</span></span><br></pre></td></tr></table></figure>
+
+<p>例2：反例——数据交换的失败</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">myswap</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;myswap:&quot;</span> &lt;&lt; x &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; y &lt;&lt; endl;</span><br><span class="line">    <span class="type">int</span> t = x;</span><br><span class="line">    x = y;</span><br><span class="line">    y = t;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;myswap:&quot;</span> &lt;&lt; x &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; y &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> a, b;</span><br><span class="line">    cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;main: &quot;</span> &lt;&lt; a &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; b &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">myswap</span>(a, b);<span class="comment">//传值</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;main: &quot;</span> &lt;&lt; a &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; b &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 运行中形参可以成功交换，但实参不会交换</span></span><br></pre></td></tr></table></figure>
+
+<p>可以将形参添加引用如：<code>void myswap(int &amp;x, int &amp;y)</code>可以成功交换。</p>
+<h3 id="5-函数返回值"><a href="#5-函数返回值" class="headerlink" title="5. 函数返回值"></a>5. 函数返回值</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> 表达式;</span><br></pre></td></tr></table></figure>
+
+<p>作用：返回函数的结果。</p>
+<p>操作本质：（拷贝）将<code>return</code>后面表达式的值传给指定类型的临时变量输出，不可寻址。</p>
+<blockquote>
+<p>如：临时变量不能做左值，<code>max(a, b) = 2</code>是非法的。</p>
+</blockquote>
+<p>返回值的类型：</p>
+<ul>
+<li><p>如果该函数返回类型不为void，那么函数的调用可以组成函数调用表达式参与运算。</p>
+<ul>
+<li>例：<code>cout &lt;&lt; max(a, b);</code></li>
+</ul>
+</li>
+<li><p>如果该函数返回类型为void，那么函数的调用只能加上分号成为函数语句。</p>
+<ul>
+<li>例：<code>print();</code></li>
+</ul>
+</li>
+<li><p>如果return后面表达式的类型和函数定义的返回类型不一致，以<strong>函数定义类型</strong>为准进行转换。</p>
+<ul>
+<li><p>例：返回值类型转换</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">f</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">2.5</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 返回的临时变量将为2</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</div><div class="story post-story"><h2 id="3-3-变量作用域和生存期"><a href="#3-3-变量作用域和生存期" class="headerlink" title="3.3 变量作用域和生存期"></a>3.3 变量作用域和生存期</h2><ul>
+<li>变量除了具备类型、名字和值之外，还有空间和时间上的特性，也被称为变量的作用域和生存期。</li>
+<li>根据作用域和生存期的不同，可对变量进行不同形式的分类。</li>
+</ul>
+<h3 id="1-C-的内存分布"><a href="#1-C-的内存分布" class="headerlink" title="1. C++的内存分布"></a>1. C++的内存分布</h3><table>
+<thead>
+<tr>
+<th>区域</th>
+<th>作用</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>代码区</td>
+<td>存放程序代码指令</td>
+<td></td>
+</tr>
+<tr>
+<td>堆区</td>
+<td>存储动态数据</td>
+<td></td>
+</tr>
+<tr>
+<td>栈区</td>
+<td>存放局部变量</td>
+<td>分配栈区时不处理内存，即变量取随机值</td>
+</tr>
+<tr>
+<td>全局数据区</td>
+<td>存放全局和静态变量</td>
+<td>分配该区时内存清零，变量自动初始化为零</td>
+</tr>
+</tbody></table>
+<h3 id="2-变量的作用域"><a href="#2-变量的作用域" class="headerlink" title="2. 变量的作用域"></a>2. 变量的作用域</h3><p>根据作用域不同，将变量分为全局变量和局部变量。</p>
+<h4 id="1-全局变量"><a href="#1-全局变量" class="headerlink" title="(1) 全局变量"></a>(1) 全局变量</h4><ul>
+<li>如果一个变量定义的位置不在任何函数或复合语句内，则该变量成为全局变量可以被所有函数或层次访问。</li>
+<li>全局变量的作用域：由定义处开始，到所在文件尾部结束，因此也称为文件作用域。</li>
+<li>一般情况下，将全局文件定义在文件的开头部分，则所有函数中都可以对全局变量进行读写。</li>
+</ul>
+<p>例：全局变量的使用</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> n=<span class="number">100</span>; <span class="comment">//n为全局变量</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    n *= <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    n *= <span class="number">2</span>; cout&lt;&lt;n&lt;&lt;endl; <span class="comment">//输出200</span></span><br><span class="line">    <span class="built_in">func</span>(); cout&lt;&lt;n&lt;&lt;endl; <span class="comment">//输出400</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注：</p>
+<ul>
+<li>全局变量的使用应<strong>尽量谨慎</strong>，过多地使用因为每一个函数都可以更改全局变量，容易导致逻辑和流程的混乱。</li>
+<li>全局变量的存储地点在内存的全局数据区，如不赋初始值则自动初始化为<code>0</code>。</li>
+</ul>
+<h4 id="2-局部变量"><a href="#2-局部变量" class="headerlink" title="(2) 局部变量"></a>(2) 局部变量</h4><ul>
+<li>如果一个变量定义在某个特定的函数或复合语句内，则该变量为局部变量，只能在该函数或层次内被访问。</li>
+<li>局部变量的作用域：从变量定义开始，到所在的函数或复合语句的尾部结束，也称为<code>块域</code>。</li>
+<li>局部变量的存储地点在内存的<code>栈区</code>，如果不初始化就为随机值。</li>
+</ul>
+<h4 id="3-作用域的覆盖"><a href="#3-作用域的覆盖" class="headerlink" title="(3) 作用域的覆盖"></a>(3) 作用域的覆盖</h4><table>
+<thead>
+<tr>
+<th>作用域</th>
+<th>是否可以重名</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>不同函数的局部变量</td>
+<td>可以</td>
+</tr>
+<tr>
+<td>全局变量和局部变量</td>
+<td>可以</td>
+</tr>
+<tr>
+<td>不同层次的局部变量</td>
+<td>可以</td>
+</tr>
+<tr>
+<td>同一函数的局部变量</td>
+<td>不可以</td>
+</tr>
+<tr>
+<td>同一层次的局部变量</td>
+<td>不可以</td>
+</tr>
+</tbody></table>
+<ul>
+<li><strong>变量重名在作用域覆盖的区域内遵循<code>局部优先</code>的规则。</strong></li>
+<li><strong>如果局部变量覆盖了全局变量，可以使用域作用符<code>::</code>调用同名全局变量。</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> n=<span class="number">100</span>; <span class="comment">//全局变量n</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> i=<span class="number">200</span>, j=<span class="number">300</span>;</span><br><span class="line">	cout &lt;&lt; n &lt;&lt; <span class="string">&#x27;\t&#x27;</span> &lt;&lt; i &lt;&lt; <span class="string">&#x27;\t&#x27;</span> &lt;&lt; j &lt;&lt; endl;</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> i=<span class="number">500</span>, j=<span class="number">600</span>, n; <span class="comment">//局部变量n，层次内的变量i, j</span></span><br><span class="line">	    n=i+j;</span><br><span class="line">		cout&lt;&lt; n &lt;&lt; <span class="string">&#x27;\t&#x27;</span> &lt;&lt; i &lt;&lt; <span class="string">&#x27;\t&#x27;</span> &lt;&lt; j &lt;&lt; endl;</span><br><span class="line">		cout&lt;&lt; ::n &lt;&lt;endl; <span class="comment">//输出全局变量n</span></span><br><span class="line">	&#125;</span><br><span class="line">	n=i+j; <span class="comment">//修改全局变量</span></span><br><span class="line">	cout &lt;&lt; n &lt;&lt; <span class="string">&#x27;\t&#x27;</span> &lt;&lt; i &lt;&lt; <span class="string">&#x27;\t&#x27;</span> &lt;&lt; j &lt;&lt; endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-局部声明作用域"><a href="#4-局部声明作用域" class="headerlink" title="(4) 局部声明作用域"></a>(4) 局部声明作用域</h4><p>作用范围仅限声明语句内，因此可省略其参数名。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">max</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span></span>;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">max</span><span class="params">(<span class="type">int</span>, <span class="type">int</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-变量的生存期"><a href="#3-变量的生存期" class="headerlink" title="3. 变量的生存期"></a>3. 变量的生存期</h3><ul>
+<li>根据生存期不同，将变量分为<code>动态变量</code>和<code>静态变量</code>。</li>
+<li>不同生存期的变量，用<code>存储类型</code>的不同来体现。</li>
+</ul>
+<h4 id="1-动态变量"><a href="#1-动态变量" class="headerlink" title="(1) 动态变量"></a>(1) 动态变量</h4><p>当程序运行至变量所在的<strong>函数</strong>的时候，系统对其进行空间分配；当所在的<strong>函数运行结束</strong>时，系统收回其存储空间。之前使用的局部变量一般就属于动态变量。</p>
+<h4 id="2-静态变量"><a href="#2-静态变量" class="headerlink" title="(2) 静态变量"></a>(2) 静态变量</h4><p>静态变量：当<strong>程序</strong>开始运行的时候，变量即被创建，并一直生存至<strong>程序的结束</strong>。之前的全局变量即为静态变量。另可改造普通局部变量的属性，使其成为静态局部变量。</p>
+<h4 id="3-存储类型"><a href="#3-存储类型" class="headerlink" title="(3) 存储类型"></a>(3) 存储类型</h4><p>变量定义的完整方式：<code>存储类型 数据类型 变量名 = 初始值</code></p>
+<p>C++中支持的4种不同的存储类型：</p>
+<h5 id="①-auto"><a href="#①-auto" class="headerlink" title="① auto"></a>① auto</h5><ul>
+<li>普通的局部变量都属于<code>auto</code>类型，也称为自动变量，属于默认类别，可以省略。</li>
+<li>最新版本的C++中对<code>auto</code>的定义已经有所变化。</li>
+</ul>
+<p>例：<code>int c</code>和<code>auto int c</code>是等价的。（在C++98环境中）</p>
+<h5 id="②-register"><a href="#②-register" class="headerlink" title="② register"></a>② register</h5><ul>
+<li>用<code>register</code>修饰的变量称为寄存器变量，使用方式与<code>auto</code>变量几乎一致，但存储在CPU的寄存器中，不可寻址，不推荐使用。</li>
+<li><code>register</code>在<code>C++17</code>及之后被弃用。</li>
+</ul>
+<h5 id="③-static"><a href="#③-static" class="headerlink" title="③ static"></a>③ static</h5><p>用<code>static</code>修饰的变量具备静态属性，根据所修饰变量的作用域不同可以分为<code>静态局部变量</code>和<code>静态全局变量</code>。</p>
+<p><strong>A. 静态局部变量</strong></p>
+<p>如果在局部变量上使用<code>static</code>修饰，则成为<code>静态局部变量</code>，其作用域不变依旧为局部，当其所在的块第一次被执行时，系统在<code>全局数据区</code>开辟其空间，直到<strong>整个程序结束</strong>才释放，即：<strong>静态局部变量具有局部作用域，但却具有全局生命期。</strong></p>
+<p>例：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">st</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">static</span> <span class="type">int</span> t = <span class="number">100</span>; <span class="comment">//仅执行一次，下一次接着上一次的值运算</span></span><br><span class="line">	t ++;</span><br><span class="line">    <span class="keyword">return</span> t;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">at</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> t = <span class="number">100</span>; <span class="comment">//自动变量，每运行一次销毁一次，下一次又重新生成</span></span><br><span class="line">	t ++;</span><br><span class="line">    <span class="keyword">return</span> t;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++)</span><br><span class="line">        cout &lt;&lt; <span class="built_in">at</span>() &lt;&lt; <span class="string">&#x27;\t&#x27;</span>; <span class="comment">//输出5个101</span></span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++)</span><br><span class="line">        cout &lt;&lt; <span class="built_in">st</span>() &lt;&lt; <span class="string">&#x27;\t&#x27;</span>; <span class="comment">//输出101~105的序列</span></span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>B. 静态全局变量</p>
+<ul>
+<li>全局变量本已经具备静态属性：存放在<code>全局数据区</code>内，生存期限为<strong>整个程序</strong>，并默认初始化为<code>0</code>等。</li>
+<li>用<code>static</code>修饰全局变量，其作用是将该变量的作用域限定在文件内，不能为其他文件调用。</li>
+</ul>
+<h5 id="④-extern"><a href="#④-extern" class="headerlink" title="④ extern"></a>④ extern</h5><p><strong>敬请期待</strong></p>
+</div><div class="story post-story"><h2 id="3-4-函数的嵌套和递归"><a href="#3-4-函数的嵌套和递归" class="headerlink" title="3.4 函数的嵌套和递归"></a>3.4 函数的嵌套和递归</h2><p>在C++中所有的函数地位是平等的，也就是说不允许嵌套定义，即将函数A定义在函数B当中。</p>
+<p>嵌套调用是允许的，也就是在函数<code>A</code>中调用在函数<code>B</code>。</p>
+<p><code>main</code>函数的特权：是程序运行的起点和终点。</p>
+<h3 id="1-函数的递归"><a href="#1-函数的递归" class="headerlink" title="1. 函数的递归"></a>1. 函数的递归</h3><ul>
+<li>如果在定义函数A中的过程中调用函数A，则称为直接递归调用。</li>
+<li>如果在定义函数A中调用函数B，在定义函数B中调用函数A，则称为间接递归。</li>
+</ul>
+<h3 id="2-递归函数注意事项"><a href="#2-递归函数注意事项" class="headerlink" title="2. 递归函数注意事项"></a>2. 递归函数注意事项</h3><ul>
+<li>递归函数的执行分为<strong>递推</strong>和<strong>回归</strong>两个过程。这两个过程由递归终止条件控制，即逐 层递推，直至递归终止条件，然后逐层回归。</li>
+<li>编写递归函数的大致模式：首先判断递归终止条件，如果不终止则展开递归条件。</li>
+<li>递归函数容易编写且可读性高，但运行效率极低，应避免随意使用。</li>
+</ul>
+<h3 id="3-递归函数算法示例"><a href="#3-递归函数算法示例" class="headerlink" title="3. 递归函数算法示例"></a>3. 递归函数算法示例</h3><h4 id="1-阶乘求解"><a href="#1-阶乘求解" class="headerlink" title="(1) 阶乘求解"></a>(1) 阶乘求解</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">fac</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(n == <span class="number">0</span> || n == <span class="number">1</span>) <span class="comment">//递归终止条件</span></span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span> n * <span class="built_in">fac</span>(n - <span class="number">1</span>); <span class="comment">//递归进行条件</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>运行分析：以<code>fac(5)</code>为例：</p>
+<p>① <code>n=5</code>，返回的结果为<code>5*fac(4)</code>。在<code>fac(4)</code>得出结果前，函数无法结束，程序转入执行<code>fac(4)</code>。</p>
+<p>② <code>n=4</code>，返回的结果为<code>4*fac(3)</code>。在<code>fac(3)</code>得出结果前，函数无法结束，程序转入执行<code>fac(3)</code>。</p>
+<p>……</p>
+<p>⑤ <code>n=1</code>，此时得出结果为<code>1</code>，至此分解部分结束，递归终止。</p>
+<p>⑥ 在确认<code>fac(1)</code>的值之后，<code>fac(2)</code>的结果也可以确定为<code>2*1=2</code>。</p>
+<p>⑦ 在确认<code>fac(2)</code>的值之后，<code>fac(3)</code>的结果也可以 确定为<code>3*2=6</code>。</p>
+<p>……</p>
+<p>⑨ 在确认<code>fac(4)</code>的值之后，<code>fac(5)</code>的结果最终确定为<code>5*24=120</code>，此时综合部分结束，运行完毕。</p>
+</blockquote>
 
 </div>
   </div>
@@ -2790,10 +3025,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-07T18:25:50+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-01T23:21:46+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年5月7日</p>
+    <p>更新于：2022年6月1日</p>
   </a>
 </div>
 
@@ -2933,7 +3168,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-C-%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">3.1 C++函数的定义</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%B3%BB%E7%BB%9F%E5%87%BD%E6%95%B0%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0"><span class="toc-text">1. 系统函数与自定义函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E5%92%8C%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-text">2. 函数参数和返回值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0%E7%9A%84%E6%AD%A5%E9%AA%A4"><span class="toc-text">3. 自定义函数的步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0%E7%9A%84%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F"><span class="toc-text">4. 自定义函数的语法格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89%E5%B0%8F%E7%BB%93"><span class="toc-text">5.函数定义小结</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-C-%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">3.1 C++函数的定义</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%B3%BB%E7%BB%9F%E5%87%BD%E6%95%B0%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0"><span class="toc-text">1. 系统函数与自定义函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E5%92%8C%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-text">2. 函数参数和返回值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0%E7%9A%84%E6%AD%A5%E9%AA%A4"><span class="toc-text">3. 自定义函数的步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0%E7%9A%84%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F"><span class="toc-text">4. 自定义函数的语法格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89%E5%B0%8F%E7%BB%93"><span class="toc-text">5. 函数定义小结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-%E5%87%BD%E6%95%B0%E7%9A%84%E8%B0%83%E7%94%A8%E5%92%8C%E5%A3%B0%E6%98%8E"><span class="toc-text">3.2 函数的调用和声明</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%87%BD%E6%95%B0%E7%9A%84%E8%B0%83%E7%94%A8%E8%BF%87%E7%A8%8B"><span class="toc-text">1. 函数的调用过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%87%BD%E6%95%B0%E7%9A%84%E4%B8%89%E7%A7%8D%E8%B0%83%E7%94%A8%E6%83%85%E5%86%B5"><span class="toc-text">2. 函数的三种调用情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%87%BD%E6%95%B0%E7%9A%84%E5%A3%B0%E6%98%8E"><span class="toc-text">3. 函数的声明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92"><span class="toc-text">4. 函数的参数传递</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%B8%A4%E7%A7%8D%E5%8F%82%E6%95%B0"><span class="toc-text">(1) 两种参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E4%BC%A0%E9%80%92%E8%BF%87%E7%A8%8B"><span class="toc-text">(2) 传递过程</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-text">5. 函数返回值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E7%94%9F%E5%AD%98%E6%9C%9F"><span class="toc-text">3.3 变量作用域和生存期</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-C-%E7%9A%84%E5%86%85%E5%AD%98%E5%88%86%E5%B8%83"><span class="toc-text">1. C++的内存分布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-text">2. 变量的作用域</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="toc-text">(1) 全局变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="toc-text">(2) 局部变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E4%BD%9C%E7%94%A8%E5%9F%9F%E7%9A%84%E8%A6%86%E7%9B%96"><span class="toc-text">(3) 作用域的覆盖</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E5%B1%80%E9%83%A8%E5%A3%B0%E6%98%8E%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-text">(4) 局部声明作用域</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%8F%98%E9%87%8F%E7%9A%84%E7%94%9F%E5%AD%98%E6%9C%9F"><span class="toc-text">3. 变量的生存期</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%8A%A8%E6%80%81%E5%8F%98%E9%87%8F"><span class="toc-text">(1) 动态变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F"><span class="toc-text">(2) 静态变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B"><span class="toc-text">(3) 存储类型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0-auto"><span class="toc-text">① auto</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1-register"><span class="toc-text">② register</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A2-static"><span class="toc-text">③ static</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A3-extern"><span class="toc-text">④ extern</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-%E5%87%BD%E6%95%B0%E7%9A%84%E5%B5%8C%E5%A5%97%E5%92%8C%E9%80%92%E5%BD%92"><span class="toc-text">3.4 函数的嵌套和递归</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%87%BD%E6%95%B0%E7%9A%84%E9%80%92%E5%BD%92"><span class="toc-text">1. 函数的递归</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">2. 递归函数注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0%E7%AE%97%E6%B3%95%E7%A4%BA%E4%BE%8B"><span class="toc-text">3. 递归函数算法示例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E9%98%B6%E4%B9%98%E6%B1%82%E8%A7%A3"><span class="toc-text">(1) 阶乘求解</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -4420,7 +4655,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Extremeer 极振科技传媒工作室","url":"https://extremeer.github.io/","logo":{"@type":"ImageObject","url":"https://blogsources-1305284863.file.myqcloud.com/extremeer/image/mobile_extremeer_logo.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://blogsources-1305284863.file.myqcloud.com/extremeer/image/mobile_extremeer_logo.png"},"url":"https://extremeer.github.io/","sameAs":["/"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://extremeer.github.io/","name":"Extremeer 极振科技传媒工作室"}},{"@type":"ListItem","position":2,"item":{"@id":"https://extremeer.github.io/categories/科技·编程/","name":"科技·编程"}},{"@type":"ListItem","position":3,"item":{"@id":"https://extremeer.github.io/tech/e6a42058/","name":"「C++极简教程」第三章 C++函数和编译预处理"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"「C++极简教程」第三章 C++函数和编译预处理","description":"本系列为C++的入门学习者服务，旨在于为此前毫无C++基础且未来要学习C++的学习者简单介绍关于C++语言最基础的部分知识，如果已入门C++，则不需要阅读本系列。","datePublished":"2022-05-05T16:00:00.000Z","dateModified":"2022-05-07T10:25:50.062Z","inLanguage":["zh-CN","en","zh-HK","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://extremeer.github.io/tech/e6a42058/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://blogsources-1305284863.file.myqcloud.com/extremeer/image/mobile_extremeer_logo.png"},"url":"https://extremeer.github.io/"},"publisher":{"@type":"Organization","name":"Extremeer 极振科技传媒工作室","logo":{"@type":"ImageObject","url":"https://blogsources-1305284863.file.myqcloud.com/extremeer/image/mobile_extremeer_logo.png","width":192,"height":192}},"url":"https://extremeer.github.io/tech/e6a42058/","wordCount":0,"articleSection":"科技·编程","keywords":"C++,教程","image":{"@type":"ImageObject","url":"https://blogsources-1305284863.file.myqcloud.com/extremeer/image/mobile_extremeer_logo.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Extremeer 极振科技传媒工作室","url":"https://extremeer.github.io/","logo":{"@type":"ImageObject","url":"https://blogsources-1305284863.file.myqcloud.com/extremeer/image/mobile_extremeer_logo.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://blogsources-1305284863.file.myqcloud.com/extremeer/image/mobile_extremeer_logo.png"},"url":"https://extremeer.github.io/","sameAs":["/"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://extremeer.github.io/","name":"Extremeer 极振科技传媒工作室"}},{"@type":"ListItem","position":2,"item":{"@id":"https://extremeer.github.io/categories/科技·编程/","name":"科技·编程"}},{"@type":"ListItem","position":3,"item":{"@id":"https://extremeer.github.io/tech/e6a42058/","name":"「C++极简教程」第三章 C++函数和编译预处理"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"「C++极简教程」第三章 C++函数和编译预处理","description":"本系列为C++的入门学习者服务，旨在于为此前毫无C++基础且未来要学习C++的学习者简单介绍关于C++语言最基础的部分知识，如果已入门C++，则不需要阅读本系列。","datePublished":"2022-05-05T16:00:00.000Z","dateModified":"2022-06-01T15:21:46.359Z","inLanguage":["zh-CN","en","zh-HK","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://extremeer.github.io/tech/e6a42058/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://blogsources-1305284863.file.myqcloud.com/extremeer/image/mobile_extremeer_logo.png"},"url":"https://extremeer.github.io/"},"publisher":{"@type":"Organization","name":"Extremeer 极振科技传媒工作室","logo":{"@type":"ImageObject","url":"https://blogsources-1305284863.file.myqcloud.com/extremeer/image/mobile_extremeer_logo.png","width":192,"height":192}},"url":"https://extremeer.github.io/tech/e6a42058/","wordCount":0,"articleSection":"科技·编程","keywords":"C++,教程","image":{"@type":"ImageObject","url":"https://blogsources-1305284863.file.myqcloud.com/extremeer/image/mobile_extremeer_logo.png","width":192,"height":192}}]</script>
 
 
 
